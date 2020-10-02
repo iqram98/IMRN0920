@@ -112,3 +112,71 @@ console.log(balikKata("SanberCode")); // edoCrebnaS
 console.log(balikKata("Haji Ijah")); // hajI ijaH
 console.log(balikKata("racecar")); // racecar
 console.log(balikKata("I am Sanbers")); // srebnaS ma I
+
+// Soal 6
+console.log("\n===Soal 6===");
+function dataHandling2(data) {
+  data.splice(1, 1, "Roman Alamsyah Elsharawy");
+  data.splice(2, 1, "Provinsi Bandar Lampung");
+  data.splice(4, 0, "Pria");
+  data.splice(5, 1, "SMA Internasional Metro");
+  console.log(data);
+  var tanggal = data[3].split("/");
+  var bulan = tanggal[1];
+  switch (bulan) {
+    case "01":
+      bulan = "Januari";
+      break;
+    case "02":
+      bulan = "Februari";
+      break;
+    case "03":
+      bulan = "Maret";
+      break;
+    case "04":
+      bulan = "April";
+      break;
+    case "05":
+      bulan = "Mei";
+      break;
+    case "06":
+      bulan = "Juni";
+      break;
+    case "07":
+      bulan = "Juli";
+      break;
+    case "08":
+      bulan = "Agustus";
+      break;
+    case "09":
+      bulan = "September";
+      break;
+    case "10":
+      bulan = "Oktober";
+      break;
+    case "11":
+      bulan = "November";
+      break;
+    case "12":
+      bulan = "Desember";
+      break;
+  }
+  console.log(bulan);
+  var sortTanggal = data[3].split("/").sort((x, y) => {
+    return y - x;
+  });
+  console.log(sortTanggal);
+  console.log(tanggal.join("-"));
+  var nama = data[1].slice(0, 15);
+  console.log(nama);
+}
+
+var input = [
+  "0001",
+  "Roman Alamsyah",
+  "Bandar Lampung",
+  "21/05/1989",
+  "Membaca",
+];
+
+dataHandling2(input);
