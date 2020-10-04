@@ -60,7 +60,7 @@ function sum(startNum, finishNum, step = 1) {
     return arr.reduce(function (a, b) {
       return a + b;
     });
-  } else if (startNum) {
+  } else if (startNum) { 
     return startNum;
   } else {
     return 0;
