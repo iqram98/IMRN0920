@@ -72,72 +72,21 @@ function shoppingTime(memberId, money) {
     object.memberId = memberId;
     object.money = money;
     var item = [
-      "Sepatu Stacattu",
-      "Baju Zoro",
-      "Baju H & N",
-      "Sweater Unikloo",
-      "Casing Handphone",
+      { barang: "Sepatu Stacattu", harga: 1500000 },
+      { barang: "Baju Zoro", harga: 500000 },
+      { barang: "Baju H & N", harga: 250000 },
+      { barang: "Sweater Unikloo", harga: 175000 },
+      { barang: "Casing Handphone", harga: 50000 },
     ];
     var beli = [];
-    if (money - 1500000 >= 0) {
-      beli.push(item[0]);
-      money -= 1500000;
-      if (money - 500000 >= 0) {
-        beli.push(item[1]);
-        money -= 500000;
-        if (money - 250000 >= 0) {
-          beli.push(item[2]);
-          money -= 250000;
-          if (money - 175000 >= 0) {
-            beli.push(item[3]);
-            money -= 175000;
-            if (money - 50000 >= 0) {
-              beli.push(item[4]);
-              money -= 50000;
-            }
-          }
-        }
+    item.forEach((e) => {
+      if (money - e.harga >= 0) {
+        beli.push(e.barang);
+        money -= e.harga;
       }
-    } else if (money - 500000 >= 0) {
-      beli.push(item[1]);
-      money -= 500000;
-      if (money - 250000 >= 0) {
-        beli.push(item[2]);
-        money -= 250000;
-        if (money - 175000 >= 0) {
-          beli.push(item[3]);
-          money -= 175000;
-          if (money - 50000 >= 0) {
-            beli.push(item[4]);
-            money -= 50000;
-          }
-        }
-      }
-    } else if (money - 250000 >= 0) {
-      beli.push(item[2]);
-      money -= 250000;
-      if (money - 175000 >= 0) {
-        beli.push(item[3]);
-        money -= 175000;
-        if (money - 50000 >= 0) {
-          beli.push(item[4]);
-          money -= 50000;
-        }
-      }
-    } else if (money - 175000 >= 0) {
-      beli.push(item[3]);
-      money -= 175000;
-      if (money - 50000 >= 0) {
-        beli.push(item[4]);
-        money -= 50000;
-      }
-    } else if (money - 50000 >= 0) {
-      beli.push(item[4]);
-      money -= 50000;
-    }
+    });
     object.listPurchased = beli;
     object.changeMoney = money;
-
     return object;
   } else if (money < 50000) {
     return "Mohon maaf, uang tidak cukup";
