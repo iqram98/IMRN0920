@@ -69,7 +69,7 @@ console.log(score.average());
 */
 console.log("\n===Soal 2===");
 const data = [
-  // ["email", "quiz - 1", "quiz - 2", "quiz - 3"],
+  ["email", "quiz - 1", "quiz - 2", "quiz - 3"],
   ["abduh@mail.com", 78, 89, 90],
   ["khairun@mail.com", 95, 85, 88],
   ["bondra@mail.com", 70, 75, 78],
@@ -79,6 +79,7 @@ const data = [
 function viewScores(data, subject) {
   let obj = [];
   data.forEach(e => {
+    if (e[0] == 'email') return;
     let nilai;
     if (subject == "quiz-1") {
       nilai = e[1];
@@ -133,7 +134,7 @@ console.log("\n===Soal 3===");
 
 function recapScores(data) {
   data.forEach((e, index) => {
-    
+    if (e[0] == 'email') return;
     let score = new Score;
     score.points = [e[1], e[2], e[3]];
     let predikat;
@@ -144,8 +145,8 @@ function recapScores(data) {
     } else if (score.average() > 90){
       predikat = "honour";
     }
-    console.log(`${index+1}. Email: ${e[0]}`);
-    console.log(`Rata-rata: ${score.average()}`);
+    console.log(`${index}. Email: ${e[0]}`);
+    console.log(`Rata-rata: ${(Number.isInteger(score.average())) ? score.average() : score.average().toFixed(1)}`);
     console.log(`Predikat: ${predikat}`);
     console.log("\n");
 
