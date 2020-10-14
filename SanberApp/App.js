@@ -1,8 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Tugas12 from "./tugas/tugas12/App";
+//import Tugas12 from "./tugas/tugas12/App";
+//import LoginScreen from "./tugas/tugas13/LoginScreen";
+import AboutScreen from "./tugas/tugas13/AboutScreen";
 
 export default function App() {
-  return <Tugas12 />;
+  return <AboutScreen />;
 }
