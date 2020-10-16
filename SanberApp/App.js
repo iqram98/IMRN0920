@@ -5,8 +5,10 @@ import { StyleSheet, Text, View } from "react-native";
 //import LoginScreen from "./tugas/tugas13/LoginScreen";
 //import AboutScreen from "./tugas/tugas13/AboutScreen";
 //import ToDoApp from "./tugas/tugas14/App";
-import SkillScreen from "./tugas/tugas14/SkillScreen";
+//import SkillScreen from "./tugas/tugas14/SkillScreen";
+//import Tugas15 from "./tugas/tugas15/index";
+import Navigation from "./tugas/tugasNavigation/Navigation";
 
 export default function App() {
-  return <SkillScreen />;
+  return <Navigation />;
 }
