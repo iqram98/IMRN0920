@@ -64,11 +64,11 @@ class SkillScreen extends Component {
                   <Text
                     style={{
                       backgroundColor: "transparent",
-                      fontSize: 15,
+                      fontSize: 10,
                       color: "#fff",
                     }}
                   >
-                    Programming
+                    Bahasa Pemrograman
                   </Text>
                 </LinearGradient>
               </TouchableOpacity>
@@ -195,12 +195,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 20,
-    width: "30%",
+    width: "100%",
     height: 30,
   },
   buttonLoginTouch: {
-    width: "100%",
-    alignItems: "center",
+    width: "30%",
   },
 });
 

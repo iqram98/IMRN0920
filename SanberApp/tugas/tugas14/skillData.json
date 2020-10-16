@@ -5,7 +5,7 @@
         "skillName": "React Native",
         "category": "Library",
         "categoryName": "Framework / Library",
-        "logoUrl": "../assets/react.png",
+        "logoUrl": "react",
         "iconType": "MaterialCommunityIcons",
         "iconName": "react",
         "percentageProgress": "50%"
@@ -15,7 +15,7 @@
         "skillName": "Laravel",
         "category": "Library",
         "categoryName": "Framework / Library",
-        "logoUrl": "../assets/laravel.png",
+        "logoUrl": "laravel",
         "iconType": "MaterialCommunityIcons",
         "iconName": "laravel",
         "percentageProgress": "100%"
@@ -25,7 +25,7 @@
         "skillName": "JavaScript",
         "category": "Language",
         "categoryName": "Bahasa Pemrograman",
-        "logoUrl": "../assets/javascript.png",
+        "logoUrl": "javascript",
         "iconType": "MaterialCommunityIcons",
         "iconName": "language-javascript",
         "percentageProgress": "30%"
@@ -35,7 +35,7 @@
         "skillName": "Python",
         "category": "Language",
         "categoryName": "Bahasa Pemrograman",
-        "logoUrl": "../assets/python.png",
+        "logoUrl": "python",
         "iconType": "MaterialCommunityIcons",
         "iconName": "language-python",
         "percentageProgress": "70%"
@@ -45,17 +45,17 @@
         "skillName": "Git",
         "category": "Technology",
         "categoryName": "Teknologi",
-        "logoUrl": "../assets/git.png",
+        "logoUrl": "git",
         "iconType": "MaterialCommunityIcons",
         "iconName": "git",
         "percentageProgress": "75%"
       },
       {
         "id": 6,
-        "skillName": "Gitlab",
+        "skillName": "Github",
         "category": "Technology",
         "categoryName": "Teknologi",
-        "logoUrl": "../assets/github.png",
+        "logoUrl": "gitlab",
         "iconType": "MaterialCommunityIcons",
         "iconName": "gitlab",
         "percentageProgress": "60%"
