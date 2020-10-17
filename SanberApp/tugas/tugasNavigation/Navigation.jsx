@@ -11,12 +11,7 @@ import ProjectScreen from "./ProjectScreen";
 import AddScreen from "./AddScreen";
 
 const LoginStack = createStackNavigator();
-const LoginStackScreen = () => (
-  <LoginStack.Navigator>
-    <LoginStack.Screen name="Login" component={LoginScreen} />
-    <LoginStack.Screen name="SkillScreen" component={SkillScreen} />
-  </LoginStack.Navigator>
-);
+
 const Tabs = createBottomTabNavigator();
 const TabsStackScreen = () => (
   <Tabs.Navigator>
@@ -26,14 +21,24 @@ const TabsStackScreen = () => (
   </Tabs.Navigator>
 );
 const Drawer = createDrawerNavigator();
+const DrawerScreen = () => (
+  <Drawer.Navigator>
+    <Drawer.Screen name="SkillScreen" component={TabsStackScreen} />
+    <Drawer.Screen name="About" component={AboutScreen} />
+  </Drawer.Navigator>
+);
 
 export default Navigation = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator>
-        <Drawer.Screen name="SkillScreen" component={TabsStackScreen} />
-        <Drawer.Screen name="About" component={AboutScreen} />
-      </Drawer.Navigator>
+      <LoginStack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <LoginStack.Screen name="Login" component={LoginScreen} />
+        <LoginStack.Screen name="SkillScreen" component={DrawerScreen} />
+      </LoginStack.Navigator>
     </NavigationContainer>
   );
 };
