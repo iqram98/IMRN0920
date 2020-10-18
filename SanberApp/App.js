@@ -7,8 +7,9 @@ import { StyleSheet, Text, View } from "react-native";
 //import ToDoApp from "./tugas/tugas14/App";
 //import SkillScreen from "./tugas/tugas14/SkillScreen";
 //import Tugas15 from "./tugas/tugas15/index";
-import Navigation from "./tugas/tugasNavigation/Navigation";
+//import Navigation from "./tugas/tugasNavigation/Navigation";
+import Quiz3 from "./tugas/quiz3/Navigation";
 
 export default function App() {
-  return <Navigation />;
+  return <Quiz3 />;
 }
