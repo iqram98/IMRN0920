@@ -9,8 +9,11 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  FlatList,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import DataItem from "./Product";
+import data from "./data.json";
 
 export default Login = () => {
   return (
@@ -114,59 +117,15 @@ export default Login = () => {
             </View>
           </View>
           <View style={styles.productList}>
-            <View style={styles.productTabs}>
-              <Image
-                source={{
-                  uri:
-                    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-                }}
-                style={styles.productImg}
-              />
-              <Text style={{ color: "#575757", fontSize: 14 }}>
-                Sepatu Nike
-              </Text>
-              <Text style={{ fontSize: 12 }}>$12.22</Text>
-            </View>
-            <View style={styles.productTabs}>
-              <Image
-                source={require("./assets/flash1.png")}
-                style={styles.productImg}
-              />
-              <Text style={{ color: "#575757", fontSize: 14 }}>
-                Tiare HandWash
-              </Text>
-              <Text style={{ fontSize: 12 }}>$12.22</Text>
-            </View>
-            <View style={styles.productTabs}>
-              <Image
-                source={require("./assets/flash1.png")}
-                style={styles.productImg}
-              />
-              <Text style={{ color: "#575757", fontSize: 14 }}>
-                Tiare HandWash
-              </Text>
-              <Text style={{ fontSize: 12 }}>$12.22</Text>
-            </View>
-            <View style={styles.productTabs}>
-              <Image
-                source={require("./assets/flash1.png")}
-                style={styles.productImg}
-              />
-              <Text style={{ color: "#575757", fontSize: 14 }}>
-                Tiare HandWash
-              </Text>
-              <Text style={{ fontSize: 12 }}>$12.22</Text>
-            </View>
-            <View style={styles.productTabs}>
-              <Image
-                source={require("./assets/flash1.png")}
-                style={styles.productImg}
-              />
-              <Text style={{ color: "#575757", fontSize: 14 }}>
-                Tiare HandWash
-              </Text>
-              <Text style={{ fontSize: 12 }}>$12.22</Text>
-            </View>
+            <FlatList
+              data={data.items}
+              renderItem={(data) => <DataItem data={data.item} />}
+              keyExtractor={(data) => data.id}
+              numColumns={2}
+              columnWrapperStyle={{
+                justifyContent: "space-around",
+              }}
+            />
           </View>
         </View>
       </ScrollView>
@@ -254,7 +213,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginVertical: 10,
+    marginTop: 10,
   },
   productHeader: {
     flexDirection: "row",
@@ -271,9 +230,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   productList: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
+    flexDirection: "column",
   },
   tabBar: {
     height: 50,

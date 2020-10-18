@@ -8,33 +8,33 @@
     },
     {
       "id": 2,
-      "productName": "Sepatu",
-      "price": "$19.99",
-      "imageUrl": "Framework / Library"
+      "productName": "Baju",
+      "price": "$20.21",
+      "imageUrl": "https://i.pinimg.com/originals/cf/d2/26/cfd2269874d043bea790e6933533c52a.jpg"
     },
     {
       "id": 3,
-      "productName": "Sepatu",
-      "price": "$19.99",
-      "imageUrl": "Framework / Library"
+      "productName": "Laptop",
+      "price": "$30.45",
+      "imageUrl": "https://laptop-hunter.com/103319/notebook-asus-vivobook-s15-s531fa-bq152t-90nb0ll3-m02930-goldgreen.jpg"
     },
     {
       "id": 4,
-      "productName": "Sepatu",
-      "price": "$19.99",
-      "imageUrl": "Framework / Library"
+      "productName": "Hoodie",
+      "price": "$10.10",
+      "imageUrl": "https://i.pinimg.com/originals/a4/61/76/a4617639be9fae41cca039d8513133ad.jpg"
     },
     {
       "id": 5,
-      "productName": "Sepatu",
-      "price": "$19.99",
-      "imageUrl": "Framework / Library"
+      "productName": "Kursi",
+      "price": "$18.00",
+      "imageUrl": "https://i.pinimg.com/originals/88/e1/49/88e149d1e742a72de4d3811db1f3b82a.jpg"
     },
     {
       "id": 6,
-      "productName": "Sepatu",
-      "price": "$19.99",
-      "imageUrl": "Framework / Library"
+      "productName": "Vas",
+      "price": "$9.99",
+      "imageUrl": "https://pbs.twimg.com/media/EdGQ59ZUcAA4f3q.jpg"
     }
   ]
 }
