@@ -35,7 +35,7 @@ export default Login = () => {
           style={{ justifyContent: "center", marginLeft: 10 }}
         />
       </View>
-      <ScrollView style={styles.content}>
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.banner}>
           <Image
             source={require("./assets/Slider.png")}

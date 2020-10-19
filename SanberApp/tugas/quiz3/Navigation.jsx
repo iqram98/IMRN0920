@@ -10,6 +10,7 @@ import Register from "./Register";
 import Chart from "./Chart";
 import Message from "./Message";
 import Profile from "./Profile";
+import Splash from "./Splash";
 
 const HomeStack = createStackNavigator();
 
@@ -76,6 +77,7 @@ export default Navigation = () => {
           headerShown: false,
         }}
       >
+        <HomeStack.Screen name="Splash" component={Splash} />
         <HomeStack.Screen name="Register" component={Register} />
         <HomeStack.Screen name="Login" component={Login} />
         <HomeStack.Screen name="Home" component={TabsStackScreen} />
